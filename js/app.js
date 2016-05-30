@@ -18,21 +18,22 @@ angular.module('devmtnTravel', ['ui.router'])
             .state('packages',{
                 url:'/packages',
                 templateUrl: "../views/packages.html",
-                controller: 'mainCtrl',
+                controller: 'packageCtrl',
                 controllerAs: 'vm'
             })
             .state('booked',{
                 url:'/booked/:id',
                 templateUrl: "../views/booked.html",
-                controller: 'mainCtrl',
+                controller: 'bookedCtrl',
                 controllerAs: 'vm'
             })
             .state('locations',{
                 url:'/locations',
                 templateUrl: "../views/locations.html",
-                controller: 'mainCtrl',
+                controller: 'locationCtrl',
                 controllerAs: 'vm'
-            });
+            })
+
 
         $urlRouterProvider
             .otherwise('/');
